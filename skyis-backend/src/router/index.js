@@ -1,0 +1,24 @@
+import express from 'express';
+import analysis from './analysis';
+import food from  './food';
+import ingredient from './ingredient'
+import recommend from './recommend';
+import user from './user';
+
+const router = express.Router();
+
+/*router.use('/', (req, res) => {
+    res.send("HomePage ");
+})*/
+router.use('/*', (req, res, next) => {
+    res.setHeader("Expires", "-1");
+    res.setHeader("Cache-Control", "must-revalidate, private");
+    next();
+})
+router.use('/analysis', analysis);
+router.use('/food', food);
+router.use('/ingredient', ingredient);
+router.use('/recommend', recommend);
+router.use('/user', user);
+
+export default router;

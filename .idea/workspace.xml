@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7078dcb8-4c43-4893-8641-e55b208c83ae" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/skyis-backend/node_modules/.cache/@babel/register/.babel.7.6.2.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-backend/node_modules/.cache/@babel/register/.babel.7.6.2.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-backend/node_modules/body-parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-backend/node_modules/body-parser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-backend/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-backend/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-backend/src/router/ingredient/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-backend/src/router/ingredient/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-backend/src/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-backend/src/server.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/skyis-backend" />
+  </component>
+  <component name="ProjectId" id="1RiZB1xPADAtKe8PQHqyUfrSJV6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/skyis-backend/src/router/user" />
+      <recent name="$PROJECT_DIR$/skyis-backend/src/router/recommend" />
+      <recent name="$PROJECT_DIR$/skyis-backend/src/router/ingredient" />
+      <recent name="$PROJECT_DIR$/skyis-backend/src/router/food" />
+      <recent name="$PROJECT_DIR$/skyis-backend/src/router" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7078dcb8-4c43-4893-8641-e55b208c83ae" name="Default Changelist" comment="" />
+      <created>1570151737720</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1570151737720</updated>
+      <workItem from="1570151738935" duration="5504000" />
+      <workItem from="1570415278213" duration="11025000" />
+      <workItem from="1570493050390" duration="1903000" />
+      <workItem from="1570666517423" duration="13000" />
+      <workItem from="1571014558598" duration="13947000" />
+      <workItem from="1571101463902" duration="1700000" />
+      <workItem from="1571111167652" duration="4070000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
