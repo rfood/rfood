@@ -17,8 +17,6 @@ import { Op } from 'sequelize';
  *      2: NAME EXIST
  *      3: CODE EXIST
  *
- * swingtru
- * ut5335**
  */
 router.post('/', (req, res) => {
     // Err 1 : 한글만 가능한 정규 표현식  https://intro0517.tistory.com/135

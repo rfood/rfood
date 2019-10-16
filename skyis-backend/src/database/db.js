@@ -1,10 +1,12 @@
 import { Sequelize } from 'sequelize'
+
+
+
 require('dotenv').config();
 
-const MARIA_USERE = (process.env.MARIA_USER === undefined ? '' : process.env.MARIA_USER)
-const { MARIA_HOST, MARIA_PW } = process.env
+const { MARIA_HOST, MARIA_PW, MARIA_USER } = process.env
 
-const db = new Sequelize('skyis_db', MARIA_USERE, MARIA_PW, {
+const db = new Sequelize('skyis_db', MARIA_USER, MARIA_PW, {
     host: MARIA_HOST || '',
     dialect: 'mariadb',
     define: {
@@ -16,7 +18,7 @@ const db = new Sequelize('skyis_db', MARIA_USERE, MARIA_PW, {
         min: 0,
         acquire: 3000,
         idle: 1000
-    }
-})
-
-export default db
+    },
+    timezone: "+09:00"
+});
+export default db;

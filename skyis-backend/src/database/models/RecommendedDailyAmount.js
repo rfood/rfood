@@ -30,4 +30,6 @@ const RecommendedDailyAmount = db.define(
         tableName: 'recommended_daily_amount',
         comment: '1일 권장량 테이블 ( 연령대, 영양소, 양 )'
     }
-)
+);
+
+export default RecommendedDailyAmount;

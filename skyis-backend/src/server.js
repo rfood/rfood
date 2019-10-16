@@ -5,53 +5,48 @@ import session from 'express-session';
 import api from './router';
 import path from 'path';
 import db from "./database/db";
-
-require('dotenv').config();
-
-const app = express();
-app.set('port', process.env.PORT || 8001);
+import {associate, sync } from "./database/sync";
 
 
-app.use(morgan('dev'));
-app.use(express.json());
+export default class Server {
+    constructor(app) {
+        associate();
+        this.app = new express();
+        this.initializeDb();
+        this.middleware();
+    }
+    initializeDb() {
+        db.authenticate()
+            .then(() => {
+                console.log('DB Connection is Success');
+            })
+            .catch(err => {
+                console.error('Unable to connect to DB');
+            });
+    }
+    middleware() {
+        const { app } = this;
+        app.use(morgan('dev'));
+        app.use(express.json());
 
-app.use(express.static(path.join(__dirname, '../public')));
-app.use(express.urlencoded({ extended: false}));
-app.use(cookieParser('skyissecret'));
-app.use(session({
-    resave: false,
-    saveUninitialized: false,
-    secret: process.env.COOKIE_SECRET,
-    cookie: {
-        httpOnly: true,
-        secure: false,
-    },
-}));
-app.use('/api', api);
-
-db.authenticate()
-    .then(() => {
-        console.log('connection success');
-    })
-    .catch(err => {
-        console.error('unable connection');
-    });
-
-/*
-app.use((req, res, next) => {
-   const err = new Error('Not Found');
-   err.status = 404;
-   next(err);
-});
-
-
-app.use((err, req, res) => {
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
-    res.status(err.status || 500);
-    res.render('error');
-});
-*/
-app.listen(app.get('port'), () => {
-    console.log(app.get('port'), '번 포트에서 대기중');
-});
+        app.use(express.static(path.join(__dirname, '../public')));
+        app.use(express.urlencoded({ extended: false}));
+        app.use(cookieParser('skyissecret'));
+        app.use(session({
+            resave: false,
+            saveUninitialized: false,
+            secret: process.env.COOKIE_SECRET,
+            cookie: {
+                httpOnly: true,
+                secure: false,
+            },
+        }));
+        app.use('/api', api);
+    }
+    listen(port) {
+        const { app } = this;
+        app.listen(port, () => {
+            console.log(`${port}번 포트에서 작동중`);
+        });
+    }
+}

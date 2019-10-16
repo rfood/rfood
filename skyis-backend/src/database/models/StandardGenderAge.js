@@ -1,5 +1,8 @@
 import * as Sequelize from "sequelize";
 import db from "../db";
+import Nutrient from "./Nutrient";
+import RecommendedDailyAmount from "./RecommendedDailyAmount";
+import Ingredient from "./Ingredient";
 
 /**
  * 2019.10.16 Made by Heo In
@@ -40,4 +43,10 @@ const StandardGenderAge = db.define(
     }
 );
 
+StandardGenderAge.associate = function associate() {
+    StandardGenderAge.belongsToMany(Nutrient, {
+        through: RecommendedDailyAmount,
+        foreignKey: "standard_gender_age_id",
+    });
+}
 export default StandardGenderAge;

@@ -1,7 +1,11 @@
 import * as Sequelize from 'sequelize'
 import db from '../db'
-import IngredientType from './IngredientType'
-import IngredientUnit from './IngredientUnit'
+
+import IngredientType from "./IngredientType";
+import IngredientNutrient from "./IngredientNutrient";
+import FoodIngredient from "./FoodIngredient";
+import Nutrient from "./Nutrient";
+import Food from "./Food";
 
 /**
  * 2019.10.02 Made by Heo In
@@ -41,20 +45,29 @@ const Ingredient  = db.define(
     }
 );
 
-Ingredient.hasOne(IngredientType, {
-    foreignKey: 'fk_ingredient_type_id',
-    sourceKey: 'id',
-    onUpdate: 'CASCADE',
-    onDelete: 'SET NULL'
-});
-Ingredient.hasOne(IngredientUnit, {
-    foreignKey: 'fk_ingredient_unit_id',
-    sourceKey: 'id',
-    onUpdate: 'CASCADE',
-    onDelete: 'SET NULL'
-});
+Ingredient.associate = function associate() {
+    Ingredient.belongsTo(IngredientType, {
+        foreignKey: "ingredient_type_id",
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE"
+    });
+/*
+    Ingredient.belongsTo(IngredientUnit, {
+        foreignKey: "ingredient_unit_id",
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE"
+    });
+*/
+    Ingredient.belongsToMany(Nutrient, {
+        through: IngredientNutrient,
+        foreignKey: "ingredient_id"
+    });
 
-
+    Ingredient.belongsToMany(Food, {
+        through: FoodIngredient,
+        foreignKey: "ingredient_id"
+    });
+}
 
 export default Ingredient;
 

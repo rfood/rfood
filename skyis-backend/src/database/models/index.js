@@ -1,0 +1,9 @@
+export { default as Food } from './Food';
+export { default as FoodIngredient } from './FoodIngredient';
+export { default as Ingredient } from './Ingredient';
+export { default as IngredientNutrient } from './IngredientNutrient';
+export { default as IngredientType } from './IngredientType';
+export { default as Nutrient } from './Nutrient';
+export { default as NutrientType } from './NutrientType';
+export { default as RecommendedDailyAmount } from './RecommendedDailyAmount';
+export { default as StandardGenderAge } from './StandardGenderAge';

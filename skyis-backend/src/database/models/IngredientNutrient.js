@@ -1,7 +1,5 @@
 import * as Sequelize from "sequelize";
 import db from '../db';
-import Ingredient from './Ingredient';
-import Nutrient from './Nutrient';
 
 /**
  * 2019.10.16 Made by Heo In
@@ -33,3 +31,5 @@ const IngredientNutrient = db.define(
     }
 
 )
+
+export default IngredientNutrient;

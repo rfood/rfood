@@ -1,7 +1,4 @@
 import express from 'express';
-import { searchIngredient } from './ingredientCtrl';
-import Ingredient from "../../database/models/Ingredient";
-
 const router = express.Router();
 import { Op } from 'sequelize';
 
@@ -29,8 +26,8 @@ router.get('/:id', (req, res) => {
             code: 1
         });
     }
-    NAME
 });
+/*
 router.post('/', (req, res) => {
     // Err 1 : 한글만 가능한 정규 표현식  https://intro0517.tistory.com/135
     let nameKorRegex = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
@@ -71,7 +68,7 @@ router.post('/', (req, res) => {
             return res.status(200);
         }
     });
-});
+});*/
 
 /**
  * Made by Heo In
@@ -82,6 +79,7 @@ router.post('/', (req, res) => {
  * Error Code
  *      1: BAD NAME
  **/
+/*
 router.get('/:name', (req, res) => {
     // 한글만 가능한 정규식
     let nameKorRegex = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
@@ -106,7 +104,7 @@ router.get('/:name', (req, res) => {
     }).catch(err => {
         console.log(err);
     })
-});
+});*/
 
 
 export default router;

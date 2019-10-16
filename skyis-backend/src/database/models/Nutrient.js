@@ -1,5 +1,10 @@
 import * as Sequelize from "sequelize";
 import db from "../db";
+import RecommendedDailyAmount from "./RecommendedDailyAmount";
+import StandardGenderAge from "./StandardGenderAge";
+import NutrientType from "./NutrientType";
+import Ingredient from "./Ingredient";
+import IngredientNutrient from "./IngredientNutrient";
 
 /**
  * 2019.10.16 Made by Heo In
@@ -45,5 +50,23 @@ const Nutrient = db.define(
         comment: '영양 성분 데이터베이스 에너지, 탄, 단, 지 ... '
     }
 );
+
+Nutrient.associate = function associate() {
+    Nutrient.belongsTo(NutrientType, {
+        foreignKey: "nutrient_type_id",
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE"
+    });
+
+    Nutrient.belongsToMany(StandardGenderAge, {
+        through: RecommendedDailyAmount,
+        foreignKey: "nutrient_id"
+    });
+
+    Nutrient.belongsToMany(Ingredient, {
+        through: IngredientNutrient,
+        foreignKey: "nutrient_id"
+    });
+}
 
 export default Nutrient;

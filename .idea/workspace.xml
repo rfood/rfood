@@ -21,6 +21,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/skyis-backend/src/router/nutrient" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -61,7 +62,8 @@
       <workItem from="1571101463902" duration="1700000" />
       <workItem from="1571111167652" duration="4070000" />
       <workItem from="1571117307896" duration="4705000" />
-      <workItem from="1571184466299" duration="5819000" />
+      <workItem from="1571184466299" duration="6337000" />
+      <workItem from="1571198575180" duration="10615000" />
     </task>
     <servers />
   </component>
