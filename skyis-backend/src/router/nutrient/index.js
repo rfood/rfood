@@ -7,19 +7,30 @@ import { Op } from 'sequelize';
 
 /**
  * Made by Heo In
- * Ingredient 식재료 추가
+ * Nutrient
+ * Ingredient의 Nutrient를 받아온다
  *
- * POST /api/ingredient/
- * BODY SAMPLE: { "code": "T0290002600a", "name": "개미" }
+ * GET /api/nutrient/:id
+ * Param : { id: 50 }
  *
  * Error Code
- *      1: BAD NAME
+     *      1: BAD ID
  *      2: NAME EXIST
  *      3: CODE EXIST
  *
  * swingtru
  * ut5335**
  */
+router.get('/:id', (req, res) => {
+    let numberRegex = /[^0-9]/g;
+    if(numberRegex.test(req.params.id)) {
+        return res.status(400).json({
+            error: "BAD ID",
+            code: 1
+        });
+    }
+    NAME
+});
 router.post('/', (req, res) => {
     // Err 1 : 한글만 가능한 정규 표현식  https://intro0517.tistory.com/135
     let nameKorRegex = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
