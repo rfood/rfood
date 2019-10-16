@@ -61,7 +61,7 @@ router.post('/', (req, res) => {
 });
 
 /**
- * Made by Heo In
+ * Made by Heo Inㅋ
  * Ingredient 식재료 조회
  *
  * GET /api/ingredient/:name
@@ -94,6 +94,16 @@ router.get('/:name', (req, res) => {
         console.log(err);
     })
 });
-
+router.get('/', (req, res) => {
+    Ingredient.findAll({
+        attributes: ['id', 'code', 'name'],
+        limit: 100,
+    }).then(result => {
+        res.json(result);
+        return res.status(200);
+    }).catch(err => {
+        console.log(err);
+    })
+})
 
 export default router;

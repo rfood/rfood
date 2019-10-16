@@ -19,7 +19,7 @@ import Food from "./Food";
  * 	underscored: column 이름을 camelCase로 할지 underscore 방식으로 할지 설정
  * 	freezeTableName : table name을 자동 변환하는 것을 막는다
  * )
- */
+ */FoodIngredient
 const Ingredient  = db.define(
     'ingredient',
     {
