@@ -3,7 +3,7 @@ import {
     Food,
     Ingredient,
     Nutrient,
-    StandardGenderAge
+    StandardGenderAge,
 } from "./models";
 
 export function associate() {

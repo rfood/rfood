@@ -1,5 +1,10 @@
 import * as Sequelize from "sequelize";
 import db from '../db';
+import NutrientType from "./NutrientType";
+import StandardGenderAge from "./StandardGenderAge";
+import RecommendedDailyAmount from "./RecommendedDailyAmount";
+import Ingredient from "./Ingredient";
+import Nutrient from "./Nutrient";
 
 /**
  * 2019.10.16 Made by Heo In

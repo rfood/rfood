@@ -67,6 +67,7 @@ Nutrient.associate = function associate() {
         through: IngredientNutrient,
         foreignKey: "nutrient_id"
     });
+
 }
 
 export default Nutrient;

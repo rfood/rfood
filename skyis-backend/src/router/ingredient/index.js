@@ -1,5 +1,4 @@
 import express from 'express';
-import { searchIngredient } from './ingredientCtrl';
 import Ingredient from "../../database/models/Ingredient";
 
 const router = express.Router();
@@ -61,7 +60,7 @@ router.post('/', (req, res) => {
 });
 
 /**
- * Made by Heo Inㅋ
+ * Made by Heo In
  * Ingredient 식재료 조회
  *
  * GET /api/ingredient/:name
@@ -94,6 +93,16 @@ router.get('/:name', (req, res) => {
         console.log(err);
     })
 });
+
+/**
+ * Made by Heo In
+ * Ingredient 식재료 조회
+ *
+ * GET /api/ingredient/
+ *
+ * Error Code
+ **/
+
 router.get('/', (req, res) => {
     Ingredient.findAll({
         attributes: ['id', 'code', 'name'],
