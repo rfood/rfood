@@ -157,14 +157,12 @@ router.get('/food/:id', (req, res) => {
                         "unit": ""
                     }
                 }
-                console.log(result.ingredients[ingredient].nutrients[nutrient].ingredient_nutrient.nutrient_amount);
                 allNut.nutrients[result.ingredients[ingredient].nutrients[nutrient].id].amount += result.ingredients[ingredient].nutrients[nutrient].ingredient_nutrient.nutrient_amount * am;
                 allNut.nutrients[result.ingredients[ingredient].nutrients[nutrient].id].name_kor = result.ingredients[ingredient].nutrients[nutrient].name_kor;
                 allNut.nutrients[result.ingredients[ingredient].nutrients[nutrient].id].unit = result.ingredients[ingredient].nutrients[nutrient].unit;
             }
         }
-        console.log(allNut);
-        res.json(result);
+        res.json(allNut);
         return res.status(200);
     }).catch(err => {
         console.log(err);
