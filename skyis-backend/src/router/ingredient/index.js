@@ -18,6 +18,8 @@ import { Op } from 'sequelize';
  *
  */
 router.post('/', (req, res) => {
+    console.log(req.body.code);
+    console.log(req.body.name);
     // Err 1 : 한글만 가능한 정규 표현식  https://intro0517.tistory.com/135
     let nameKorRegex = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
     if(nameKorRegex.test(req.body.name)) {

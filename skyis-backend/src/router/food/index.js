@@ -82,6 +82,7 @@ router.get('/:name', (req, res) => {
  */
 router.post('/', (req, res) => {
     // Err 1 : 음식 이름 한글인지 체크
+    console.log(req.body.name);
     let nameKorRegex = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
     if(nameKorRegex.test(req.body.name)) {
         return res.status(400).json({

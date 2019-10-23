@@ -70,4 +70,5 @@ Nutrient.associate = function associate() {
 
 }
 
+
 export default Nutrient;

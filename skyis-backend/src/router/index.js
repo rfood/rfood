@@ -1,5 +1,4 @@
 import express from 'express';
-import analysis from './analysis';
 import food from  './food';
 import ingredient from './ingredient'
 import recommend from './recommend';
@@ -17,7 +16,6 @@ router.use('/*', (req, res, next) => {
     next();
 })
 router.use('/nutrient', nutrient);
-router.use('/analysis', analysis);
 router.use('/food', food);
 router.use('/ingredient', ingredient);
 router.use('/recommend', recommend);
