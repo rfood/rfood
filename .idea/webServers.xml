@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="aad1bdd5-36ec-45d3-9976-aeb00af460bf" name="skyis" url="http://ec2-52-14-246-244.us-east-2.compute.amazonaws.com">
+        <fileTransfer host="ec2-52-14-246-244.us-east-2.compute.amazonaws.com" port="22" privateKey="$USER_HOME$/다운로드/skyis-freetier.ppk" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

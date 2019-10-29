@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7078dcb8-4c43-4893-8641-e55b208c83ae" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/FoodPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/root.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/store/configure.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/logo.svg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,14 +29,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1RiZB1xPADAtKe8PQHqyUfrSJV6" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/skyis-backend/src/router/nutrient" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.17.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -70,6 +89,8 @@
       <workItem from="1571794998677" duration="15028000" />
       <workItem from="1571873230917" duration="4684000" />
       <workItem from="1572221393353" duration="5265000" />
+      <workItem from="1572312395180" duration="2404000" />
+      <workItem from="1572334008302" duration="5044000" />
     </task>
     <servers />
   </component>
