@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7078dcb8-4c43-4893-8641-e55b208c83ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Common/PageTitle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Ingredient/SearchInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Ingredient/SearchList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/IngredientContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/IngredientInsertContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/IngredientSearchContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/lib/api/ingredient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/IngredientPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/MainPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/store/modules/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/store/modules/ingredient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/store/modules/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/root.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/store/configure.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/store/configure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/lib/api/ingredient.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/lib/api/ingredient.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -106,7 +87,7 @@
       <workItem from="1572221393353" duration="5265000" />
       <workItem from="1572312395180" duration="2404000" />
       <workItem from="1572334008302" duration="5254000" />
-      <workItem from="1572399576582" duration="16085000" />
+      <workItem from="1572399576582" duration="20330000" />
     </task>
     <servers />
   </component>
