@@ -2,28 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7078dcb8-4c43-4893-8641-e55b208c83ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/FoodPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/root.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/store/configure.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Common/PageTitle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Ingredient/SearchInput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Ingredient/SearchList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/IngredientContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/IngredientInsertContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/IngredientSearchContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/lib/api/ingredient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/IngredientPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/MainPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/store/modules/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/store/modules/ingredient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/store/modules/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skyis-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skyis-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/components/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/root.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/root.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/store/configure.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/store/configure.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,7 +48,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.17.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/skyis-frontend/src/pages" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -44,12 +56,15 @@
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/skyis-frontend/src/pages" />
       <recent name="$PROJECT_DIR$/skyis-backend/src/router/nutrient" />
       <recent name="$PROJECT_DIR$/skyis-backend/src/router/user" />
       <recent name="$PROJECT_DIR$/skyis-backend/src/router/recommend" />
       <recent name="$PROJECT_DIR$/skyis-backend/src/router/ingredient" />
-      <recent name="$PROJECT_DIR$/skyis-backend/src/router/food" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -90,7 +105,8 @@
       <workItem from="1571873230917" duration="4684000" />
       <workItem from="1572221393353" duration="5265000" />
       <workItem from="1572312395180" duration="2404000" />
-      <workItem from="1572334008302" duration="5044000" />
+      <workItem from="1572334008302" duration="5254000" />
+      <workItem from="1572399576582" duration="16085000" />
     </task>
     <servers />
   </component>
