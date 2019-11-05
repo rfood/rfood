@@ -5,7 +5,7 @@
       <paths name="skyis">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/ubuntu" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/home/ubuntu/skyis" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

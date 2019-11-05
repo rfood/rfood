@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import SearchInput from "../../components/Ingredient/SearchInput";
-import * as ingredientActions from 'store/modules/ingredient';
+import * as ingredientActions from '../../store/modules/ingredient';
 import {bindActionCreators} from "redux";
 import { connect } from 'react-redux';
+import SearchList from "../../components/Ingredient/SearchList";
 
 class IngredientSearchContainer extends Component {
     state = {
@@ -35,10 +36,10 @@ class IngredientSearchContainer extends Component {
             handleChange,
             handleInsert
         } = this;
-        console.log(ingredient.toJS());
         return(
             <React.Fragment>
                 <SearchInput onChange={handleChange} onInsert={handleInsert} value={input}/>
+                <SearchList rows={ingredient.toJS()}/>
             </React.Fragment>
         );
     }

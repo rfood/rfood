@@ -82,7 +82,7 @@ router.get('/:name', (req, res) => {
 
     Ingredient.findAll({
         attributes: ['id', 'code', 'name'],
-        limit: 10,
+        limit: 100,
         where: {
             name: {
                 [Op.substring]: req.params.name

@@ -6,7 +6,6 @@ import api from './router';
 import path from 'path';
 import db from "./database/db";
 import {associate, sync } from "./database/sync";
-import cors from 'cors';
 
 
 export default class Server {
@@ -41,11 +40,6 @@ export default class Server {
                 secure: false,
             },
         }));
-        const corsOptions = {
-            origin: 'http://localhost:3000',
-            credentials: true,
-        };
-        app.use(cors(corsOptions));
         app.use('/api', api);
     }
     listen(port) {

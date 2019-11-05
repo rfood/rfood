@@ -1,7 +1,4 @@
 import { Sequelize } from 'sequelize'
-
-
-
 require('dotenv').config();
 
 const { MARIA_HOST, MARIA_PW, MARIA_USER } = process.env
