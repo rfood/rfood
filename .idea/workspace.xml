@@ -2,27 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7078dcb8-4c43-4893-8641-e55b208c83ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Ingredient/InsertInput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Ingredient/InsertList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Nutrient/GenderAge.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Nutrient/NutrientSearch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Nutrient/NutrientTable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Nutrient/NutrientType.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/NutrientContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/IngredientInsertPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/NutrientPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Nutrient/NutrientChart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/lib/api/nutrient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/store/modules/nutrient.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skyis-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skyis-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/components/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/components/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/components/Ingredient/SearchList.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Ingredient/SearchList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/IngredientInsertContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/IngredientInsertContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/IngredientSearchContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/IngredientSearchContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/lib/api/ingredient.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/lib/api/ingredient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/pages/IngredientPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/pages/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/components/Nutrient/GenderAge.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Nutrient/GenderAge.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/NutrientContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/NutrientContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/store/modules/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/store/modules/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skyis-frontend/src/store/modules/ingredient.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/store/modules/ingredient.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,7 +106,8 @@
       <workItem from="1572312395180" duration="2404000" />
       <workItem from="1572334008302" duration="5254000" />
       <workItem from="1572399576582" duration="20430000" />
-      <workItem from="1572840520793" duration="32163000" />
+      <workItem from="1572840520793" duration="32241000" />
+      <workItem from="1572999739484" duration="20942000" />
     </task>
     <servers />
   </component>
@@ -137,5 +126,17 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/skyis-frontend/src/store/modules/ingredient.js</url>
+          <line>31</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

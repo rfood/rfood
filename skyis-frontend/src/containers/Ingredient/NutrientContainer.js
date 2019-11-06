@@ -2,55 +2,55 @@ import React, { Component }  from 'react';
 import GenderAge from "../../components/Nutrient/GenderAge";
 import NutrientType from "../../components/Nutrient/NutrientType";
 import NutrientTable from "../../components/Nutrient/NutrientTable";
-import { PieChart } from "@toast-ui/react-chart/src";
+import NutrientChart from "../../components/Nutrient/NutrientChart";
+import { connect } from 'react-redux';
+import { bindActionCreators} from "redux";
+import * as nutrientActions from '../../store/modules/nutrient';
+import {Map} from "immutable";
 
 class NutrientContainer extends Component {
-    render() {
-        const data = {
-            categories: ['June', 'July', 'Aug', 'Sep', 'Oct', 'Nov'],
-            series: [
-                {
-                    name: 'Budget',
-                    data: [5000, 3000, 5000, 7000, 6000, 4000]
-                },
-                {
-                    name: 'Income',
-                    data: [8000, 1000, 7000, 2000, 5000, 3000]
-                }
-            ]
-        };
+    state = {
+        gender: 0,
+        age: 0,
+        type: 0,
+    }
+    handleGenderClick = (num) => {
+        this.setState(
+            {gender: num}
+        )
+    }
 
-        const options = {
-            chart: {
-                width: 1160,
-                height: 650,
-                title: 'Monthly Revenue',
-                format: '1,000'
-            },
-            yAxis: {
-                title: 'Month'
-            },
-            xAxis: {
-                title: 'Amount',
-                min: 0,
-                max: 9000,
-                suffix: '$'
-            },
-            series: {
-                showLabel: true
-            }
-        };
+    handleAgeClick = (num) => {
+        this.setState(
+            {age: num}
+        )
+    }
+
+    handleTypeClick = (num) => {
+        this.setState(
+            {type:  num}
+        )
+    }
+
+    render() {
         return(
             <React.Fragment>
                 <GenderAge/>
                 <NutrientType/>
-                <PieChart
-                    data={data}
-                    options={options}/>
+                <NutrientChart/>
                 <NutrientTable/>
             </React.Fragment>
         )
     }
 }
 
-export default NutrientContainer;
+export default connect(
+    (state) => ({
+        nutrients: state.nutrient.get('nutrients'),
+        recommend: state.nutrient.get('recommend'),
+        food: state.nutrient.get('food'),
+    }),
+    (dispatch) => ({
+        NutrientActions: bindActionCreators(nutrientActions, dispatch)
+    })
+) (NutrientContainer);

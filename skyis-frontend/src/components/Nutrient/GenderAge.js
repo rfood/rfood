@@ -6,12 +6,18 @@ import {
     ButtonGroup
 } from "@material-ui/core";
 
-const useStyles = makeStyles({
-    table: {
-        minWidth: 500
+const useStyles = makeStyles(theme => ({
+    root: {
+        flexGrow: 1
+    },
+    menuButton: props => ({
+        marginRight: theme.spacing(2),
+        backgroundColor: props.buttonBackgroundColor
+    }),
+    title: {
+        flexGrow: 1
     }
-});
-
+}));
 const GenderAge = () => {
     const classes = useStyles();
     return(
@@ -19,8 +25,8 @@ const GenderAge = () => {
             <Grid container spacing={10} alignItems="center">
                 <Grid item>
                     <ButtonGroup color="primary" aria-label="outlined primary button group">
-                        <Button> 남 </Button>
-                        <Button> 여 </Button>
+                        <Button variant="contained" color="primary"> 남자 </Button>
+                        <Button> 여자 </Button>
                     </ButtonGroup>
                 </Grid>
                 <Grid item>

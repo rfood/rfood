@@ -22,7 +22,7 @@ export default handleActions({
         type: SEARCH_INGREDIENT,
         onSuccess: (state, action) => {
             const { data } = action.payload;
-            return state.set('ingredient', fromJS(data));
+            return state.set('food', fromJS(data));
         }
     }),
     ...pender({
