@@ -2,16 +2,118 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7078dcb8-4c43-4893-8641-e55b208c83ae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Nutrient/NutrientChart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/lib/api/nutrient.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/skyis-frontend/src/store/modules/nutrient.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/buttons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/cards.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/charts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/food_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/food_search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/food_search_type.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/forgot-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/img/undraw_posting_photo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/ingredient_add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/ingredient_search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/ingredient_search_type.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/js/demo/chart-bar-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/js/demo/chart-pie-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/js/demo/datatables-demo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/js/sb-admin-2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/_cards.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/_dropdowns.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/_error.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/_login.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/navs/_global.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/navs/_sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/navs/_topbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/utilities/_animation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/utilities/_display.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/utilities/_progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/utilities/_rotate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/scss/utilities/_text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/utilities-animation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/utilities-border.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/utilities-other.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_breadcrumb.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_button-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_code.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_custom-forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_images.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_input-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_jumbotron.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_media.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_popover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_print.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_root.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_spinners.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_toasts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_type.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/bootstrap-grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/bootstrap-reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_background-variant.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_badge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_border-radius.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_box-shadow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_caret.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_deprecate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_float.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_gradients.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_grid-framework.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_hover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_nav-divider.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_resize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_table-row.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_text-emphasis.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_text-hide.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_text-truncate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/mixins/_visibility.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/utilities/_align.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/utilities/_background.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/utilities/_borders.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/utilities/_display.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/utilities/_embed.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/utilities/_flex.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/utilities/_sizing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/utilities/_spacing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/utilities/_stretched-link.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/bootstrap/scss/vendor/_rfs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/chart.js/Chart.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/chart.js/Chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/chart.js/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/datatables/dataTables.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/datatables/dataTables.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/datatables/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/datatables/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/datatables/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/datatables/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/fontawesome-free/js/all.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/fontawesome-free/js/all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/fontawesome-free/js/brands.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/fontawesome-free/js/brands.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor/fontawesome-free/js/v4-shims.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skyis-frontend/src/components/Nutrient/GenderAge.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/components/Nutrient/GenderAge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/NutrientContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient/NutrientContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/store/modules/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/store/modules/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend/src/store/modules/ingredient.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend/src/store/modules/ingredient.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +125,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -34,10 +137,11 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.17.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/skyis-frontend/src/pages" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -45,15 +149,15 @@
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/skyis-frontend-bootstrap/vendor" />
+      <recent name="$PROJECT_DIR$/skyis-frontend-bootstrap/scss" />
+      <recent name="$PROJECT_DIR$/skyis-frontend-bootstrap/js" />
+      <recent name="$PROJECT_DIR$/skyis-frontend-bootstrap/img" />
+      <recent name="$PROJECT_DIR$/skyis-frontend-bootstrap/css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/skyis-frontend/src/containers/Ingredient" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/skyis-frontend/src/pages" />
-      <recent name="$PROJECT_DIR$/skyis-backend/src/router/nutrient" />
-      <recent name="$PROJECT_DIR$/skyis-backend/src/router/user" />
-      <recent name="$PROJECT_DIR$/skyis-backend/src/router/recommend" />
-      <recent name="$PROJECT_DIR$/skyis-backend/src/router/ingredient" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -107,7 +211,7 @@
       <workItem from="1572334008302" duration="5254000" />
       <workItem from="1572399576582" duration="20430000" />
       <workItem from="1572840520793" duration="32241000" />
-      <workItem from="1572999739484" duration="20942000" />
+      <workItem from="1572999739484" duration="43585000" />
     </task>
     <servers />
   </component>

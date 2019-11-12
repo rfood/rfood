@@ -41,6 +41,8 @@ export default class Server {
             },
         }));
         app.use('/api', api);
+        const indexRouter = require('../../skyis-frontend-bootstrap/index.html')
+        app.use(indexRouter);
     }
     listen(port) {
         const { app } = this;
