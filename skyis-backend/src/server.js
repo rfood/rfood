@@ -28,7 +28,6 @@ export default class Server {
         const { app } = this;
         app.use(morgan('dev'));
         app.use(express.json());
-        app.use(express.static(path.join(__dirname, '../public')));
         app.use(express.urlencoded({ extended: false}));
         app.use(cookieParser('skyissecret'));
         app.use(session({
@@ -41,8 +40,6 @@ export default class Server {
             },
         }));
         app.use('/api', api);
-        const indexRouter = require('../../skyis-frontend-bootstrap/index.html')
-        app.use(indexRouter);
     }
     listen(port) {
         const { app } = this;

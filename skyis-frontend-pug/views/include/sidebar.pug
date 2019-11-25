@@ -1,0 +1,68 @@
+div.wrapper
+    ul.navbar-nav.bg-gradient-primary.sidebar.sidebar-dark.accordion#iccordionSidebar
+        a.sidebar-brand.d-flex.align-items-center.justify-content-center(href='index.pug')
+            div.sidebar-brand-icon.rotate-n-15
+                i.fas.fa-laugh-wink
+
+            div.sidebar-brand-text.mx-3 RFOOD <sup> 1.0 </sup>
+
+        hr.sidebar-divider.my-0
+
+        li.nav-item.active
+            a.nav-link(href='index.pug')
+                i.fas.fa-fw.fa-tachometer-alt
+                span Rfood
+
+        hr.sidebar-divider
+
+        div.sidebar-heading 식재료
+
+        li.nav-item
+            a.nav-link.collapsed(href='#' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='true' aria-controls='collapseTwo')
+                i.fas.fa-fw.fa-cog
+                span 식재료 검색
+
+            div#collapseTwo.collapse(aria-labelledby='headingTwo' data-parent='#accordionSidebar')
+                div.bg-white.py-2.collapse-inner.rounded
+                    h6.collapse-header 옵션:
+                    a.collapse-item(href='ingredient_search.html') 이름 검색
+                    a.collapse-item(href='cards.html') 종류 검색
+
+        li.nav-item
+            a.nav-link.collapsed(href='#' data-toggle='collapse' data-target='#collapseUtilities' aria-expanded='true' aria-controls='collapseTwo')
+                i.fas.fa-fw.fa-cog
+                span 식재료 추가
+
+            div#collapseUItilities.collapse(aria-labelledby='headingTwo' data-parent='#accordionSidebar')
+                div.bg-white.py-2.collapse-inner.rounded
+                    h6.collapse-header 옵션:
+                    a.collapse-item(href='ingredient_add.html') 텍스트로 추가
+                    a.collapse-item(href='ingredient_add.html') 입력 형식으로 추가
+
+        hr.sidebar-divider
+
+        div.sidebar-heading 음식
+
+        li.nav-item
+            a.nav-link.collapsed(href='#' data-toggle='collapse' data-target='#collapseSearchFood' aria-expanded='true' aria-controls='collapseSearchFood')
+                i.fas.fa-fw.fa-cog
+                span 음식 검색
+
+            div#collapseSearchFood.collapse(aria-labelledby='headingPages' data-parent='#accordionSidebar')
+                div.bg-white.py-2.collapse-inner.rounded
+                    h6.collapse-header 옵션:
+                    a.collapse-item(href='ingredient_search.html') 이름 검색
+                    a.collapse-item(href='cards.html') 종류 검색
+
+        li.nav-item
+            a.nav-link.collapsed(href='#' data-toggle='collapse' data-target='#collapseAddFood' aria-expanded='true' aria-controls='collapseAddFood')
+                i.fas.fa-fw.fa-cog
+                span 음식 추가
+
+            div#collapseAddFood.collapse(aria-labelledby='headingPages' data-parent='#accordionSidebar')
+                div.bg-white.py-2.collapse-inner.rounded
+                    h6.collapse-header 옵션:
+                    a.collapse-item(href='ingredient_add.html') 식재료로 추가
+                    a.collapse-item(href='ingredient_add.html') 등등
+
+        hr.sidebar-divider
