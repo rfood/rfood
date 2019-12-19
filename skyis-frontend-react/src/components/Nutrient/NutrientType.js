@@ -12,7 +12,7 @@ const useStyles = makeStyles({
     }
 });
 
-const NutrientType = ( {nutrientType, onNutrientTypeClick }) => {
+const NutrientType = React.memo(( {nutrientType, onNutrientTypeClick }) => {
     const classes = useStyles();
     const [nutrientTypeArray, setNutrientTypeArray] = useState([
         {name: '주요 영양소'},
@@ -35,6 +35,6 @@ const NutrientType = ( {nutrientType, onNutrientTypeClick }) => {
             </Grid>
         </React.Fragment>
     );
-}
+});
 
 export default NutrientType;

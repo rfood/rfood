@@ -3,22 +3,20 @@ import {Nutrient, RecommendedDailyAmount, StandardGenderAge} from "../../databas
 
 const router = express.Router();
 
-router.get('/:id/:type', (req, res) => {
-    let numberRegex = /[^0-9]/g;
-    if(numberRegex.test(req.params.id)) {
-        return res.status(400).json({
-            error: "BAD TYPE",
-            code: 1
-        });
-    }
+/**
+ * Made by Heo In
+ * 2019.10.21
+ * Recommend
+ * 일일 섭취량 정보를 가져온다.
+ *
+ * GET /api/Recommend
+ *
+ * Error Code
+ *      1: BAD ID
+ *
+ */
 
-    if(numberRegex.test(req.params.type) || req.params.type < 0 || req.params.type > 8) {
-        return res.status(400).json({
-            error: "BAD TYPE",
-            code: 2
-        });
-    }
-
+router.get('/', (req, res) => {
     StandardGenderAge.findAll({
         include: [{
             model: Nutrient,
@@ -27,13 +25,7 @@ router.get('/:id/:type', (req, res) => {
                 model: RecommendedDailyAmount,
                 attributes: ["amount"]
             },
-            where: {
-                nutrient_type_id: req.params.type
-            }
         }],
-        where: {
-            id: req.params.id
-        }
     }).then(result => {
         res.json(result);
         return res.status(200);

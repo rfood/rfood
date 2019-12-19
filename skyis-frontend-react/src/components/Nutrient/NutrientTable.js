@@ -13,13 +13,10 @@ const useStyles = makeStyles({
     }
 });
 
-const NutrientTable = ({ rows } ) => {
-    console.log(rows);
+const NutrientTable = React.memo(({ genderAge, nutRows, dailyAmount } ) => {
     const classes = useStyles();
+    console.log(nutRows);
     // NULL CHECK
-    if (typeof rows === 'object' && rows.constructor.name === 'Object' && Object.keys(rows).length < 1 && Object.getOwnPropertyNames(rows) < 1){
-        rows = [];
-    }
     return(
         <Table className={classes.table}>
             <TableHead>
@@ -32,19 +29,21 @@ const NutrientTable = ({ rows } ) => {
             </TableHead>
             <TableBody>
                 {
-                    typeof rows === 'object' && rows.constructor.name === 'Object' && Object.keys(rows).length < 1 && Object.getOwnPropertyNames(rows) < 1  || (Object.keys(rows).length < 1)?
+                    nutRows.length < 1 ?
                         <div/> :
-                        rows.nutrients.map(row => (
-                            <TableRow key={row.id}>
+                        nutRows.map((row, index) => (
+                            <TableRow key={index}>
                                 <TableCell component="th" scope="row"> {row.name_kor}</TableCell>
-                                <TableCell> 권장량 </TableCell>
-                                <TableCell> {row.ingredient_nutrient.nutrient_amount} </TableCell>
-                                <TableCell> 비율 </TableCell>
+                                <TableCell> {typeof dailyAmount == "undefined"  || dailyAmount[genderAge + 1][row.id] === undefined? '' : dailyAmount[genderAge + 1][row.id] + row.unit} </TableCell>
+                                <TableCell>
+                                    {row.ingredient_nutrient.nutrient_amount + row.unit}
+                                </TableCell>
+                                <TableCell> {dailyAmount[genderAge + 1][row.id] !== undefined ? (row.ingredient_nutrient.nutrient_amount / dailyAmount[genderAge + 1][row.id] * 100).toFixed(2) + '%' : ''} </TableCell>
                             </TableRow>
-                ))}
+                        ))}
             </TableBody>
         </Table>
     );
-}
+});
 
 export default NutrientTable;

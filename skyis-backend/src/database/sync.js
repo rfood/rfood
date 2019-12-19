@@ -6,6 +6,9 @@ import {
     StandardGenderAge,
 } from "./models";
 
+/**
+ * Sequelize association을 위해서 만들었
+ */
 export function associate() {
     Food.associate();
     Ingredient.associate();

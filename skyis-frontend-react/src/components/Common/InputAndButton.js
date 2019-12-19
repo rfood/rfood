@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useCallback, } from 'react';
 import {Button, makeStyles, Paper, TextField} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
@@ -14,16 +14,13 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const SearchInput = ( { onChange, onInsert, value }) => {
+export const InputAndButton = React.memo(({ onSubmit, onChange, value, label, buttonText }) => {
     const classes = useStyles();
+
     return(
         <Paper className={classes.paper}>
-            <TextField label="식재료 검색" onChange={onChange}>
-                {value}
-            </TextField>
-            <Button variant="outlined" color="primary" align="center" onClick={onInsert} > 검색 </Button>
+            <TextField value={value} label={label} onChange={onChange}/>
+            <Button variant="outlined" color="primary" align="center" onClick={onSubmit}> {buttonText} </Button>
         </Paper>
     );
-}
-
-export default SearchInput;
+});

@@ -4,6 +4,7 @@ import ingredient from './ingredient'
 import recommend from './recommend';
 import user from './user';
 import nutrient from './nutrient';
+import util from './util';
 
 const router = express.Router();
 
@@ -20,5 +21,6 @@ router.use('/food', food);
 router.use('/ingredient', ingredient);
 router.use('/recommend', recommend);
 router.use('/user', user);
+router.use('/util', util);
 
 export default router;

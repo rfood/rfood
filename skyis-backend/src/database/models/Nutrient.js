@@ -5,7 +5,8 @@ import StandardGenderAge from "./StandardGenderAge";
 import NutrientType from "./NutrientType";
 import Ingredient from "./Ingredient";
 import IngredientNutrient from "./IngredientNutrient";
-
+import Food from "./Food";
+import FoodNutrient from "./FoodNutrient";
 /**
  * 2019.10.16 Made by Heo In
  * Nutrient Table
@@ -67,7 +68,10 @@ Nutrient.associate = function associate() {
         through: IngredientNutrient,
         foreignKey: "nutrient_id"
     });
-
+    Nutrient.belongsToMany(Food, {
+        through: FoodNutrient,
+        foreignKey: "nutrient_id"
+    });
 }
 
 

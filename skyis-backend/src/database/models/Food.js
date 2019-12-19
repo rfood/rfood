@@ -1,7 +1,10 @@
 import * as Sequelize from "sequelize";
 import db from "../db";
-import Ingredient from "./Ingredient";
+import FoodNutrient from "./FoodNutrient";
 import FoodIngredient from "./FoodIngredient";
+import FoodType from './FoodType';
+import Ingredient from "./Ingredient";
+import Nutrient from "./Nutrient";
 
 /**
  * 2019.10.16 Made by Heo In
@@ -31,15 +34,14 @@ const Food = db.define(
         },
         name: {
             type: Sequelize.STRING,
-            allowNull: false,
         },
         serving: {
             type: Sequelize.INTEGER,
-            allowNull: false,
         },
         description: Sequelize.STRING,
         image: Sequelize.STRING,
         recipe: Sequelize.STRING,
+        source: Sequelize.STRING,
     }, {
         timestamps: false,
         underscored: true,
@@ -50,8 +52,17 @@ const Food = db.define(
 )
 
 Food.associate = function associate() {
+    Food.belongsTo(FoodType, {
+        foreignKey: "food_type_id",
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE"
+    })
     Food.belongsToMany(Ingredient, {
         through: FoodIngredient,
+        foreignKey: "food_id"
+    });
+    Food.belongsToMany(Nutrient, {
+        through: FoodNutrient,
         foreignKey: "food_id"
     });
 }

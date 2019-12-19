@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchInput from "../../components/Ingredient/SearchInput";
+import SearchInput from "../../components/Common/SearchInput";
 import * as ingredientActions from '../../store/modules/ingredient';
 import {bindActionCreators} from "redux";
 import { connect } from 'react-redux';
@@ -38,7 +38,7 @@ class IngredientSearchContainer extends Component {
         } = this;
         return(
             <React.Fragment>
-                <SearchInput onChange={handleChange} onInsert={handleInsert} value={input}/>
+                <SearchInput onChange={handleChange} onClick={handleInsert} value={input} label='식재료 검색'/>
                 <SearchList rows={ingredient.toJS()}/>
             </React.Fragment>
         );

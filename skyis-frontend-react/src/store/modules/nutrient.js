@@ -24,9 +24,6 @@ export const getFoodNutrient = createAction(GET_FOOD_NUTRIENT, NutrientAPI.getFo
 export const getIngredientNutrient = createAction(GET_INGREDIENT_NUTRIENT, NutrientAPI.getIngredientNutrient);
 
 const initialState = Map({
-    gender: 0,
-    age: 0,
-    nutrientType: 0,
     nutrients: Map({}),
     recommend: Map({}),
     food: Map({})
@@ -58,7 +55,10 @@ export default handleActions({
         type: GET_INGREDIENT_NUTRIENT,
         onSuccess: (state, action) => {
             const { data } = action.payload;
-            return state.set('nutrients', fromJS(data));
+            return state.set('nutrients', fromJS(data.nutrients));
+        },
+        onFailure: () => {
+            console.log("FAILURE");
         }
     }),
     [SET_GENDER]: (state, action) => {

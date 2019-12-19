@@ -1,98 +1,138 @@
-import React, { Component }  from 'react';
-import GenderAge from "../../components/Nutrient/GenderAge";
-import NutrientType from "../../components/Nutrient/NutrientType";
-import NutrientTable from "../../components/Nutrient/NutrientTable";
-import NutrientChart from "../../components/Nutrient/NutrientChart";
+import React, { Component } from 'react';
+import NutrientTemplate from "../../components/Nutrient/NutrientTemplate";
+import {InputAndButton} from "../../components/Common/InputAndButton";
+
 import { connect } from 'react-redux';
 import { bindActionCreators} from "redux";
+
+import NutrientSearchModal from "../../components/Nutrient/NutrientSearchModal";
+import GenderAge from "../../components/Nutrient/GenderAge";
+import NutrientType from "../../components/Nutrient/NutrientType";
+
 import * as nutrientActions from '../../store/modules/nutrient';
-import * as ingredientActions from '../../store/modules/ingredient';
-import {Map} from "immutable";
-import NutrientTemplate from "../../components/Nutrient/NutrientTemplate";
-import SearchInput from "../../components/Ingredient/SearchInput";
-import NutrientSearchModal from "./NutrientSearchModal";
+import * as searchActions from '../../store/modules/search';
+import NutrientTable from "../../components/Nutrient/NutrientTable";
+import * as dailyIntakeActions from "../../store/modules/dailyIntake";
 
 class NutrientContainer extends Component {
-    state =  {
-        input: '',
+    state = {
         open: false,
-        searched: false,
-        selectedIngredient: 0,
+        selectedIngredientId: -1,
+        selectedGender: 0,
+        selectedAge: 0,
+        selectedType: 0,
+        searchInput: '',
+        dailyAmount: [[], []],
     }
-    handleGenderClick = (event, gender) => {
-         this.props.NutrientActions.setGender(gender);
+    // 일일 섭취량은 초반에 모두 가져오고, 상황마다 사용하는쪽으로 구현했음
+    componentDidMount() {
+        console.log('hi');
+        this.asyncGetDailyIntake();
     }
 
-    handleAgeClick = (event, age) => {
-        this.props.NutrientActions.setAge(age);
+    asyncGetDailyIntake = async() => {
+        await this.props.DailyIntakeActions.getDailyIntake();
+        let array =  Array();
+        this.props.dailyIntake.toJS().forEach(function(item) {
+            array[item.id] = new Array();
+            item.nutrients.forEach(function(nutrient) {
+                array[item.id][nutrient.id] = nutrient.recommended_daily_amount.amount;
+            })
+        });
+        this.setState({dailyAmount: array});
+    }
+
+    // 식재료 영양소 데이터 호출
+    GetIngredientNutrient = ( ingredientId, nutrientType ) => {
+        try {
+            this.props.NutrientActions.getIngredientNutrient(ingredientId, nutrientType);
+        } catch(e) {
+            console.log(e);
+        }
     }
 
     handleTypeClick = (event, type) => {
-        this.props.NutrientActions.setNutrientType(type);
+        this.GetIngredientNutrient(this.state.selectedIngredientId, type);
+        this.setState({
+            selectedType: type
+        })
     }
-    handleInputChange = (event) => {
-        this.setState({input: event.target.value});
+    handleGenderClick = (event, gender) => {
+        this.setState({
+            selectedGender: gender
+        });
     }
 
-    awaitSearchIngredient = async() => {
-        const { IngredientActions } = this.props;
+    handleAgeClick = (event, age) => {
+        this.setState({
+            selectedAge: age
+        });
+    };
+    //
+    SearchIngredient = (input) => {
+        console.log(input);
+        const { SearchActions } = this.props;
         try {
-            await IngredientActions.searchIngredient(this.state.input);
-            console.log(this.props.ingredient.toJS());
+            SearchActions.searchIngredient(input);
             this.setState({
                 open: true,
-                searched: true,
             })
         } catch(e) {
             console.log(e);
         }
     }
-
     handleSubmit = () => {
-        console.log("handle submit");
-        this.awaitSearchIngredient();
+        this.SearchIngredient(this.state.searchInput);
+    }
+    handleChange = (e) => {
+        this.setState({searchInput: e.target.value});
     }
 
-    awaitGetIngredientNutrient = async(newID) => {
-        try {
-            await this.props.NutrientActions.getIngredientNutrient(newID, this.props.nutrientType);
-            console.log(this.props.nutrients.toJS());
-        } catch(e) {
-            console.log(e);
-        }
-    }
-    handleClose = newID => {
-        this.awaitGetIngredientNutrient(newID);
-        if(newID) {
+    handleClose = (ingredientId, ingredientName) => {
+        console.log(ingredientName);
+        if(ingredientId != -1) {
+            this.GetIngredientNutrient(ingredientId, this.state.selectedType);
             this.setState({
                 open: false,
-                selectedIngredient: newID
-            })
+                searchInput: ingredientName,
+                selectedIngredientId: ingredientId
+            });
         } else {
             this.setState({
-                open: false
+                open: false,
+                searchInput: ingredientName,
             })
         }
-    }
+    };
+
     render() {
         return(
             <NutrientTemplate>
-                <SearchInput value={this.state.input} onChange={this.handleInputChange} onInsert={this.handleSubmit}/>
+                <InputAndButton value={this.state.searchInput} onSubmit={this.handleSubmit} onChange={this.handleChange} label="식재료 검색" buttonText="검색"/>
                 {
-                    this.state.searched ?
+                    (this.state.selectedIngredientId !== -1) ?
+                        <React.Fragment>
+                            <GenderAge gender={this.state.selectedGender} age={this.state.selectedAge} onGenderClick={this.handleGenderClick} onAgeClick={this.handleAgeClick}/>
+                            <NutrientType nutrientType={this.state.selectedType} onNutrientTypeClick={this.handleTypeClick}/>
+                        </React.Fragment> : null
                 }
-                <GenderAge gender={this.props.gender} age={this.props.age} onGenderClick={this.handleGenderClick} onAgeClick={this.handleAgeClick}/>
-                <NutrientType nutrientType={this.props.nutrientType} onNutrientTypeClick={this.handleTypeClick}/>
-                <NutrientChart/>
-                <NutrientTable rows={this.props.nutrients.toJS()}/>
-                <NutrientSearchModal
-                    id="search-menu"
-                    keepMounted
-                    open={this.state.open}
-                    onClose={this.handleClose}
-                    valueProp={this.state.selectedIngredient}
-                    searchList={this.props.ingredient.toJS()}
-                />
+                {
+                    this.props.nutrients.size < 1 ?
+                        null
+                        :
+                        <NutrientTable genderAge={this.state.selectedGender * 5 + this.state.selectedAge} nutRows={this.props.nutrients.size < 1 || this.props.nutrients.length < 1 ? [] :this.props.nutrients.toJS()} dailyAmount={this.state.dailyAmount}/>
+                }
+                {
+                    this.state.open === false ? null :
+                        <NutrientSearchModal
+                            id="search-ingredients"
+                            keepMounted
+                            open={this.state.open}
+                            onClose={this.handleClose}
+                            valueProp={this.state.selectedIngredientId}
+                            searchList={this.props.searchedIngredients.toJS()}
+                        />
+                }
             </NutrientTemplate>
         )
     }
@@ -100,16 +140,13 @@ class NutrientContainer extends Component {
 
 export default connect(
     (state) => ({
-        gender: state.nutrient.get('gender'),
-        age: state.nutrient.get('age'),
-        nutrientType: state.nutrient.get('nutrientType'),
+        searchedIngredients: state.searched.get('ingredients'),
         nutrients: state.nutrient.get('nutrients'),
-        recommend: state.nutrient.get('recommend'),
-        food: state.nutrient.get('food'),
-        ingredient: state.ingredient.get('ingredient')
+        dailyIntake: state.dailyIntake.get('dailyIntake')
     }),
     (dispatch) => ({
+        SearchActions: bindActionCreators(searchActions, dispatch),
         NutrientActions: bindActionCreators(nutrientActions, dispatch),
-        IngredientActions: bindActionCreators(ingredientActions, dispatch)
+        DailyIntakeActions: bindActionCreators(dailyIntakeActions, dispatch)
     })
-) (NutrientContainer);
+)(NutrientContainer);

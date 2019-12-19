@@ -1,4 +1,4 @@
-import React from "react";
+import React, {createRef, useState, useRef } from "react";
 import {
     Dialog,
     DialogActions,
@@ -10,9 +10,10 @@ import {
     Button
 } from "@material-ui/core";
 
-const NutrientSearchModal = ( {onClose, valueProp, open, searchList, ...other}) => {
+const NutrientSearchModal = React.memo(( {onClose, valueProp, open, searchList, ...other}) => {
     const [value, setValue] = React.useState(valueProp);
-    const radioGroupRef = React.useRef(null);
+    const [name, setName] = React.useState('');
+    const radioGroupRef = useRef();
 
     React.useEffect(() => {
         if(!open) {
@@ -24,18 +25,19 @@ const NutrientSearchModal = ( {onClose, valueProp, open, searchList, ...other}) 
     }, [valueProp, open]);
 
     const handleEntering = () => {
-        if(radioGroupRef.current != null) {
-            radioGroupRef.current.focus();
-        }
+        radioGroupRef.current.focus();
     }
     const handleCancel = () => {
-        onClose();
+        onClose(-1, '');
     }
     const handleOk = () => {
-        onClose(value);
+        onClose(value, name);
     }
     const handleChange = event => {
+        console.log(event.target);
         setValue(event.target.value);
+        setName(event.target.label);
+        radioGroupRef.current.focus();
     }
     return(
         <Dialog
@@ -49,9 +51,8 @@ const NutrientSearchModal = ( {onClose, valueProp, open, searchList, ...other}) 
             <DialogContent dividers>
                 <RadioGroup
                     ref={radioGroupRef}
-                    aria-label="ringtone"
-                    name="ringtone"
                     value={value}
+                    label={name}
                     onChange={handleChange}>
                     {
                         typeof searchList === 'object' && searchList.constructor.name === 'Object' && Object.keys(searchList).length < 1 && Object.getOwnPropertyNames(searchList) < 1 ?
@@ -71,6 +72,6 @@ const NutrientSearchModal = ( {onClose, valueProp, open, searchList, ...other}) 
             </DialogActions>
         </Dialog>
     );
-}
+});
 
 export default NutrientSearchModal;

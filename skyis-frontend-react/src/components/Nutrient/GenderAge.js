@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     wrapper: {
     }
 }));
-const GenderAge = ({gender, age, onGenderClick, onAgeClick }) => {
+const GenderAge = React.memo(({gender, age, onGenderClick, onAgeClick }) => {
     const classes = useStyles();
     const [genderArray, setGenderArray] = useState([
         {name: '남성'},
@@ -60,6 +60,6 @@ const GenderAge = ({gender, age, onGenderClick, onAgeClick }) => {
             </Grid>
         </React.Fragment>
     );
-}
+});
 
 export default GenderAge;

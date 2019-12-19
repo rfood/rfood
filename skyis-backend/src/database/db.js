@@ -3,6 +3,7 @@ require('dotenv').config();
 
 const { MARIA_HOST, MARIA_PW, MARIA_USER } = process.env
 
+// DB 정보
 const db = new Sequelize('skyis_db', MARIA_USER, MARIA_PW, {
     host: MARIA_HOST || '',
     dialect: 'mariadb',
@@ -13,8 +14,8 @@ const db = new Sequelize('skyis_db', MARIA_USER, MARIA_PW, {
     pool: {
         max: 5,
         min: 0,
-        acquire: 3000,
-        idle: 1000
+        acquire: 200000,
+        idle: 200000
     },
     timezone: "+09:00"
 });

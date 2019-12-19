@@ -68,8 +68,9 @@ router.get('/:name', (req, res) => {
  *      body
  *      {
  *          "name": "음식이름",
+ *          "type": "음식타입",
  *          "serving": "인분수",
- *          "description": "설명",
+ *          "source": "출처",
  *          "ingredients": [
  *              {"id": 321, "amount": 200},
  *              {"id": 320, "amount": 20}
@@ -82,7 +83,6 @@ router.get('/:name', (req, res) => {
  */
 router.post('/', (req, res) => {
     // Err 1 : 음식 이름 한글인지 체크
-    console.log(req.body.name);
     let nameKorRegex = /[a-z0-9]|[ \[\]{}()<>?|`~!@#$%^&*-_+=,.;:\"'\\]/g;
     if(nameKorRegex.test(req.body.name)) {
         return res.status(400).json({
@@ -91,7 +91,6 @@ router.post('/', (req, res) => {
         });
     }
     // Err 2 : 인분 수 숫자인지 체크
-
     let numberRegex = /[^0-9]/g;
     if(numberRegex.test(req.body.serving) || req.body.serving > 10000) {
         return res.status(400).json({
@@ -100,7 +99,7 @@ router.post('/', (req, res) => {
         });
     }
 
-    Food.create({ name: req.body.name, serving: req.body.serving, description: req.body.description})
+    Food.create({ name: req.body.name, type: req.body.type, serving: req.body.serving, source: req.body.source})
         .then(result => {
             let id = result.id;
             res.json(result);
@@ -114,6 +113,7 @@ router.post('/', (req, res) => {
                         return res.status(409);
                     })
             }
+
             res.status(200);
         })
         .catch(err => {

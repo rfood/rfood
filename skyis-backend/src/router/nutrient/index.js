@@ -91,7 +91,7 @@ router.get('/ingredient/:id/:type', (req, res) => {
         attributes: ['name'],
         include: [{
             model: Nutrient,
-            attributes: ['name_kor', 'unit'],
+            attributes: ['id', 'name_kor', 'unit'],
             through: {
                 model: IngredientNutrient,
                 attributes: ['nutrient_amount']
@@ -102,6 +102,8 @@ router.get('/ingredient/:id/:type', (req, res) => {
         }],
         where: {id: req.params.id}
     }).then(result => {
+        console.log(result);
+        if(result == null) result = [];
         res.json(result);
         return res.status(200);
     }).catch(err => {
@@ -132,6 +134,7 @@ router.get('/food/:id', (req, res) => {
             code: 1
         });
     }
+    // 찾으려고 하는 Food ID와 일치하는 데이터를 Food와 FoodIngredient, IngredientNutrient를 조인해서 음식 영양소를 가져온다.
     Food.findOne({
         attributes: ['name'],
         include: [{
@@ -147,28 +150,29 @@ router.get('/food/:id', (req, res) => {
         }],
         where: {id: req.params.id}
     }).then(result => {
-        let allNut = {};
-        allNut["name"] = result.name;
-        allNut["nutrients"] = [];
-        for(let ingredient in result.ingredients) {
-            let am = result.ingredients[ingredient].food_ingredient.ingredient_amount / 100;
-            for(let nutrient in result.ingredients[ingredient].nutrients) {
-                if(allNut.nutrients[result.ingredients[ingredient].nutrients[nutrient].id] == null) {
-                    allNut.nutrients[result.ingredients[ingredient].nutrients[nutrient].id] = {
+        let allNut = [], ret = {};
+        ret["name"] = result.name;
+        ret["nutrients"] = [];
+        for(let ingredient of result.ingredients) {
+            let am = ingredient.food_ingredient.ingredient_amount / 100;
+            for(let nutrient of ingredient.nutrients) {
+                if(allNut[nutrient.id] === undefined) {
+                    allNut[nutrient.id] = {
                         "amount": 0,
                         "name_kor": "",
                         "unit": ""
                     }
                 }
-                if(result.ingredients[ingredient].nutrients[nutrient].id == 1) {
-                    console.log(result.ingredients[ingredient].nutrients[nutrient].ingredient_nutrient.nutrient_amount);
-                }
-                allNut.nutrients[result.ingredients[ingredient].nutrients[nutrient].id].amount += result.ingredients[ingredient].nutrients[nutrient].ingredient_nutrient.nutrient_amount * am;
-                allNut.nutrients[result.ingredients[ingredient].nutrients[nutrient].id].name_kor = result.ingredients[ingredient].nutrients[nutrient].name_kor;
-                allNut.nutrients[result.ingredients[ingredient].nutrients[nutrient].id].unit = result.ingredients[ingredient].nutrients[nutrient].unit;
+                allNut[nutrient.id].amount += nutrient.ingredient_nutrient.nutrient_amount * am;
+                allNut[nutrient.id].name_kor = nutrient.name_kor;
+                allNut[nutrient.id].unit = nutrient.unit;
             }
         }
-        res.json(allNut);
+        for(let nut of allNut) {
+            if(nut === undefined) continue;
+            ret["nutrients"].push(nut);
+        }
+        res.json(ret);
         return res.status(200);
     }).catch(err => {
         console.log(err);
@@ -177,6 +181,19 @@ router.get('/food/:id', (req, res) => {
 
 
 
+/**
+ * Made by Heo In
+ * 2019.10.21
+ * Nutrient (Food)
+ * Food의 Nutrient를 받아온다
+ *
+ * GET /api/nutrient/food/:id/:type
+ * Param : { id: 50, type: 2 }
+ *
+ * Error Code
+ *      1: BAD ID
+ *
+ */
 router.get('/food/:id/:type', (req, res) => {
     let numberRegex = /[^0-9]/g;
     if(numberRegex.test(req.params.id)) {
@@ -193,6 +210,7 @@ router.get('/food/:id/:type', (req, res) => {
         })
     }
 
+    // 찾으려고 하는 Food의 ID와 식재료 타입이 일치하는 데이터를 Food와 FoodIngredient, IngredientNutrient를 조인해서 음식 영양소를 가져온다.
     Food.findOne({
         attributes: ['name'],
         include: [{
@@ -211,32 +229,27 @@ router.get('/food/:id/:type', (req, res) => {
         }],
         where: {id: req.params.id}
     }).then(result => {
-        let nutrients = [], ret = {};
-
+        let allNut = [], ret = {};
         ret["name"] = result.name;
         ret["nutrients"] = [];
-
-        for(let ingredient in result.ingredients) {
-            let am = result.ingredients[ingredient].food_ingredient.ingredient_amount / 100;
-            for(let nutrient in result.ingredients[ingredient].nutrients) {
-                if(nutrients[result.ingredients[ingredient].nutrients[nutrient].id] == null) {
-                    nutrients[result.ingredients[ingredient].nutrients[nutrient].id] = {
+        for(let ingredient of result.ingredients) {
+            let am = ingredient.food_ingredient.ingredient_amount / 100;
+            for(let nutrient of ingredient.nutrients) {
+                if(allNut[nutrient.id] === undefined) {
+                    allNut[nutrient.id] = {
                         "amount": 0,
                         "name_kor": "",
                         "unit": ""
                     }
                 }
-                if(result.ingredients[ingredient].nutrients[nutrient].id == 1) {
-                    console.log(result.ingredients[ingredient].nutrients[nutrient].ingredient_nutrient.nutrient_amount);
-                }
-                nutrients[result.ingredients[ingredient].nutrients[nutrient].id].amount += result.ingredients[ingredient].nutrients[nutrient].ingredient_nutrient.nutrient_amount * am;
-                nutrients[result.ingredients[ingredient].nutrients[nutrient].id].name_kor = result.ingredients[ingredient].nutrients[nutrient].name_kor;
-                nutrients[result.ingredients[ingredient].nutrients[nutrient].id].unit = result.ingredients[ingredient].nutrients[nutrient].unit;
+                allNut[nutrient.id].amount += nutrient.ingredient_nutrient.nutrient_amount * am;
+                allNut[nutrient.id].name_kor = nutrient.name_kor;
+                allNut[nutrient.id].unit = nutrient.unit;
             }
         }
-        for(let nut in nutrients) {
-            if(nutrients[nut] == null) continue;
-            ret["nutrients"].push(nutrients[nut]);
+        for(let nut of allNut) {
+            if(nut === undefined) continue;
+            ret["nutrients"].push(nut);
         }
         res.json(ret);
         return res.status(200);

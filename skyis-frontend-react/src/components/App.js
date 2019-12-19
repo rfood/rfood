@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { } from "pages";
-import {MainPage,
+import {
+    MainPage,
     IngredientSearchPage,
     IngredientInsertPage,
-    NutrientPage} from "../pages";
+    NutrientPage,
+    UploadPage,
+    SearchImagePage
+} from "../pages";
 class App extends Component {
     render(){
         return(
@@ -13,7 +17,10 @@ class App extends Component {
                     <Route exact path="/" component={MainPage} />
                     <Route path="/page/ingredient/search" component={IngredientSearchPage} />
                     <Route path="/page/ingredient/insert" component={IngredientInsertPage}/>
-                    <Route path="/page/nutrient/food" component={NutrientPage} />
+                    <Route path="/page/nutrient/ingredient" component={NutrientPage} />
+                    <Route path="/page/util/upload" component={UploadPage} />
+                    <Route path="/page/util/image" component={SearchImagePage} />
+
                 </Switch>
             </div>
         )
