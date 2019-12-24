@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7078dcb8-4c43-4893-8641-e55b208c83ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend-react/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend-react/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend-react/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend-react/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend-react/src/containers/Util/ImageCrawlingContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend-react/src/containers/Util/ImageCrawlingContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend-react/src/lib/api/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend-react/src/lib/api/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/skyis-frontend-react/src/store/modules/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/skyis-frontend-react/src/store/modules/util.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -116,7 +111,7 @@
       <workItem from="1574660591378" duration="56737000" />
       <workItem from="1575361169779" duration="39248000" />
       <workItem from="1576029393888" duration="33455000" />
-      <workItem from="1576473239325" duration="57314000" />
+      <workItem from="1576473239325" duration="59737000" />
     </task>
     <servers />
   </component>
