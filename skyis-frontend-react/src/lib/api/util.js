@@ -5,7 +5,4 @@ export const uploadFoodData = (foodData, ingredientData) => axios.post(`/api/uti
     foodData: foodData,
     ingredientData: ingredientData
 });
-export const searchImageWithURL = (queryString) =>{
-    let temp = axios.get(`/api/util/image/${queryString}`);
-    console.log(temp);
-}
+export const searchImageWithURL = (queryString) =>axios.get(`/api/util/image/${queryString}`);

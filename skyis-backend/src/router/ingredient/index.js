@@ -90,6 +90,7 @@ router.get('/:name', (req, res) => {
         }
     }).then(result => {
         res.json(result);
+        console.log(res);
         return res.status(200);
     }).catch(err => {
         console.log(err);

@@ -69,9 +69,9 @@ router.post('/upload/food', (req, res) => {
     })
 });
 
-router.get('/image/:name', async (req, res) => {
+router.get('/image/:name', async (req, res, next) => {
     try {
-        const res = await axios({
+        const temp = await axios({
             url: `https://www.google.com/search?q=${qs.escape(req.params.name)}&tbm=isch`,
             method: 'GET',
             headers: {
@@ -79,7 +79,7 @@ router.get('/image/:name', async (req, res) => {
                     'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:70.0) Gecko/20100101 Firefox/70.0',
             }
         })
-        const body = res.data;
+        const body = temp.data;
         const $ = cheerio.load(body);
         const links = [];
         const meta = $('.rg_meta');
@@ -89,12 +89,13 @@ router.get('/image/:name', async (req, res) => {
         });
         const regex = /\.(jpe?g|png|tif?f|bmp)/i;
         const urls = links.map(e => e.ou).filter(e => regex.exec(e));
-        res.json(urls);
-        res.send(urls);
-        return res.status(200);
+
+        console.log(urls);
+        console.log(res.status(200).json(urls));
+        return res;
     } catch (error) {
-        return res.status(500);
         console.log(error);
+        return res.status(500);
     }
 })
 export default router;

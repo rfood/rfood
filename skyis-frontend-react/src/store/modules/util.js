@@ -5,8 +5,8 @@ import { pender} from "redux-pender";
 
 import * as UtilAPI from '../../lib/api/util';
 
-const UPLOAD_FOOD_DATA = 'util.UPLOAD_FOOD_DATA';
-const SEARCH_IMAGE_WITH_URL = 'util.SEARCH_IMAGE_WITH_URL';
+const UPLOAD_FOOD_DATA = 'util/UPLOAD_FOOD_DATA';
+const SEARCH_IMAGE_WITH_URL = 'util/SEARCH_IMAGE_WITH_URL';
 
 export const uploadFoodData = createAction(UPLOAD_FOOD_DATA, UtilAPI.uploadFoodData);
 export const searchImageWithURL = createAction(SEARCH_IMAGE_WITH_URL, UtilAPI.searchImageWithURL);
@@ -34,7 +34,15 @@ export default handleActions({
     ...pender({
         type: SEARCH_IMAGE_WITH_URL,
         onSuccess: (state, action) => {
-
+            console.log('success');
+            const { data, status } = action.payload;
+            return state.set('imageURL', fromJS(data));
+        },
+        onFailure: (state, action) => {
+            console.log('Failure');
+        },
+        onPending: (state, action) => {
+            console.log('pendding');
         }
     })
 }, initialState);
