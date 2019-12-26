@@ -4,7 +4,6 @@
     <list default="true" id="7078dcb8-4c43-4893-8641-e55b208c83ae" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,11 +24,16 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.17.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.14.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -38,13 +42,6 @@
     <property name="two.files.diff.last.used.folder" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/skyis-frontend-react/src/components/Common" />
-      <recent name="$PROJECT_DIR$/skyis-frontend-react/src/components/Nutrient" />
-      <recent name="$PROJECT_DIR$/skyis-frontend-react/src/containers/Nutrient" />
-      <recent name="$PROJECT_DIR$/skyis-frontend-pug/views/public" />
-      <recent name="$PROJECT_DIR$/skyis-frontend-pug/views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/skyis-backend/src/util" />
@@ -52,17 +49,17 @@
       <recent name="$PROJECT_DIR$/skyis-frontend-bootstrap/scss" />
       <recent name="$PROJECT_DIR$/skyis-frontend-bootstrap/js" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/skyis-frontend-react/src/components/Common" />
+      <recent name="$PROJECT_DIR$/skyis-frontend-react/src/components/Nutrient" />
+      <recent name="$PROJECT_DIR$/skyis-frontend-react/src/containers/Nutrient" />
+      <recent name="$PROJECT_DIR$/skyis-frontend-pug/views/public" />
+      <recent name="$PROJECT_DIR$/skyis-frontend-pug/views" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="6." />
     </option>
   </component>
   <component name="RunManager">
@@ -74,6 +71,18 @@
         <item itemvalue="Node.js.GenderAge.js" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -112,6 +121,7 @@
       <workItem from="1575361169779" duration="39248000" />
       <workItem from="1576029393888" duration="33455000" />
       <workItem from="1576473239325" duration="59737000" />
+      <workItem from="1577336089428" duration="6222000" />
     </task>
     <servers />
   </component>
@@ -131,11 +141,10 @@
       </map>
     </option>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <default-breakpoints>
-        <breakpoint type="dart-exception" />
-      </default-breakpoints>
-    </breakpoint-manager>
+  <component name="WindowStateProjectService">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1577339722265">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1577339722265" />
   </component>
 </project>
